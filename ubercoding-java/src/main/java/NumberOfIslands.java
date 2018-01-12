@@ -7,10 +7,10 @@ public class NumberOfIslands {
 		if (grid == null || grid.length < 1 || grid[0].length < 1)
 			return 0;
 		int m = grid.length, n = grid[0].length;
-		Set<String> res = new HashSet<>();
+		Set<String> res = new HashSet<String>();
 		for (int i = 0; i < m; i++) {
 			for (int j = 0; j < n; j++) {
-				Set<String> set = new HashSet<>();
+				Set<String> set = new HashSet<String>();
 				if (grid[i][j] == 1) {
 					dfs(grid, i, j, i, j, set);
 					res.add(set.toString());
